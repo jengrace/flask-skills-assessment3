@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Application Response{% endblock %}
+
+{% block content %}
+    <form action="/application-success">
+      <p class="response">
+        Thank you, {{ firstname }} {{ lastname}}, for applying to be a 
+        {{ jobtitle }}. Your minimum salary requirement is {{ salaryreq }}.
+      </p>
+    </form>
+{% endblock %}

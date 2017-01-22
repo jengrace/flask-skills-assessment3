@@ -1,0 +1,51 @@
+/* Your styles can go here. */
+
+html {
+  background: url("abstract_background7.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+
+}
+
+h3 {
+    border: 2px solid gray;
+}
+
+input {
+    background-color: yellow;
+}
+
+.lastnamebold {
+    font-weight: bold;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: yellow;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.response {
+    font-size: 20px;
+}
+
+.flashes {
+    list-style-type: none;
+    border: 1px dotted gray;
+}
+
+li {
+    font-size: 20px;
+}

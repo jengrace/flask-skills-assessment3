@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Application Form{% endblock %}
+
+<!-- your html goes here -->
+{% block content %}
+    <h1>Application Form</h1>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <h3> Please fill out every section of the job application form below. You may click directly on each question to select the box you wish to fill out.
+    </h3>
+
+    <form action="/application-success" method="POST">
+
+      <label for="firstname">What is your first name?</label>
+      <input id="firstname" type="text" name="firstname">
+
+      <br>
+      <br>
+
+      <label for="lastname">What is your last name?</label>
+      <input id="lastname" class="lastnamebold" type="text" name="lastname">
+
+      <br>
+      <br>
+
+      <label for="salaryreq">Enter your salary requiremenet as a number: </label>
+      <input id="salaryreq" type="text" name="salaryreq">
+
+      <br>
+      <br>
+
+      <label for="jobtitle">Which job are you applying for?</label>
+        <select id="jobtitle" name="jobtitle">
+          {% for job in possiblejobs %}
+          <option value="{{ job }}">{{ job }}</option>
+          {% endfor %}
+        </select>
+    
+      <br>
+      <br>
+
+      <input type="submit" name="submit" value="Submit">
+    </form>
+{% endblock %}
